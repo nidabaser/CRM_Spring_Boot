@@ -22,7 +22,7 @@ Bu uygulama, müşteri ilişkileri yönetimi (CRM) amacıyla geliştirilmiş bir
 
 Aşağıda uygulamanın veritabanı yapısının genel bir diyagramı bulunmaktadır:
 
-![CRM_Entity_Diagram.png](src%2Fmain%2Fresources%2Fimages%2FCRM_Entity_Diagram.png)
+![CRM_Entity_Diagram.png](src/main/resources/images/CRM_Entity_Diagram.png)
 
 ### Kullanılan Teknolojiler 
 
