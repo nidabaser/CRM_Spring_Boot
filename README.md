@@ -40,7 +40,7 @@ Aşağıda uygulamanın veritabanı yapısının genel bir diyagramı bulunmakta
 
 - Java 21 ve üzeri 
 
-- SQL Veritabanı
+- PostgreSQL Veritabanı
 
 - Intellij IDEA veya başka bir IDE
 
