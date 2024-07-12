@@ -49,7 +49,7 @@ Aşağıda uygulamanın veritabanı yapısının genel bir diyagramı bulunmakta
 ### 1. Depoyu Klonlayın
 
 ```sh
-git clone https://github.com/kullanici_adi/CRM_Uygulamasi.git
+git clone https://github.com/nidabaser/CRM_Spring_Boot.git
 ```
 ### Lisans
 Bu proje [MIT](https://choosealicense.com/licenses/mit/) Lisansı ile lisanslanmıştır.
