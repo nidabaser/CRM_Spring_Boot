@@ -16,4 +16,5 @@ public class City {
     private long id;
     private long countryId;
     private String name;
+    private String surname;
 }
