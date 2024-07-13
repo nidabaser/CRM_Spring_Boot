@@ -1,30 +1,9 @@
-# CRM Uygulaması
-### İçindekiler
-1) Genel Bakış
-2) Özellikler
-3) Veritabanı Yapısı
-4) Kurulum
-5) Kullanım
-6) Katkıda Bulunma
-7) Lisans
-8) Genel Bakış
+# CRM with Spring Boot Project
+*In progress* *
+### Overview
+This is an open source Customer Relationship Management (CRM) system. Project <b>*is still under development*</b>. Contributions are welcome. If you want to contribute, you can open a pull request.
 
-Bu uygulama, müşteri ilişkileri yönetimi (CRM) amacıyla geliştirilmiş bir yazılımdır. Uygulama, müşteri bilgilerini, teklifleri, masrafları ve ürün detaylarını yönetmenizi sağlar. Bu doküman, uygulamanın kurulumu ve kullanımı hakkında bilgiler sunmaktadır.
-
-### Özellikler
-
-- Müşteri bilgilerini kaydetme ve yönetme
-- Teklif oluşturma ve yönetme
-- Masrafları kaydetme ve izleme
-- Ürün ve kategori yönetimi
-- Görüşme ve toplantı kayıtları
-- Veritabanı Yapısı
-
-Aşağıda uygulamanın veritabanı yapısının genel bir diyagramı bulunmaktadır:
-
-![CRM_Entity_Diagram.png](src/main/resources/images/CRM_Entity_Diagram.png)
-
-### Kullanılan Teknolojiler 
+### Technologies
 
 <code><img alt="Java" src="src/main/resources/images/java.png" title="Java" width="50"/></code>
 <code><img width="50" src="src/main/resources/images/spring.png" alt="Spring Boot" title="Spring Boot"/></code>
@@ -36,21 +15,23 @@ Aşağıda uygulamanın veritabanı yapısının genel bir diyagramı bulunmakta
 <code><img width="50" src="src/main/resources/images/git.png" alt="Git" title="Git"/></code>
 <code><img width="50" src="src/main/resources/images/github.png" alt="Github" title="Github"/></code>
 
-### Gereksinimler
+### Features
 
-- Java 21 ve üzeri 
+- Recording and managing customer information
+- Create and manage proposals
+- Recording and tracking expenses
+- Product and category management
+- Interview and meeting records
 
-- PostgreSQL Veritabanı
+### Entity Diagram (is not finished will be updated)
 
-- Intellij IDEA veya başka bir IDE
+![CRM_Entity_Diagram.png](src/main/resources/images/CRM_Entity_Diagram.png)
 
-### Adımlar
+### Requirements
 
-### 1. Depoyu Klonlayın
+- Java 21+
+- PostgreSQL 16
+- Intellij IDEA (or other IDE)
 
-```sh
-git clone https://github.com/nidabaser/CRM_Spring_Boot.git
-```
-### Lisans
-Bu proje [MIT](https://choosealicense.com/licenses/mit/) Lisansı ile lisanslanmıştır.
-
+### License
+This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License.
