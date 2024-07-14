@@ -1,22 +1,21 @@
 package dev.nida.crm.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Table(name = "meeting_status")
 public class MeetingStatus extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status_name")
-    private StatusName name; // bu satır da değiştirlecek
+    @Column(name = "status")
+    private Status status;
 
-    public enum StatusName {
+    public enum Status {
         PLANNED,
         REALISED,
         CANCELLED

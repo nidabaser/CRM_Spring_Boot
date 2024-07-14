@@ -1,20 +1,19 @@
 package dev.nida.crm.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Table(name = "countries")
 public class Country extends BaseEntity {
 
-    @Column(name = "Country_name")
+    @Column(name = "country_name")
     private String name;
 
     @OneToMany(mappedBy = "country", cascade = CascadeType.ALL)
