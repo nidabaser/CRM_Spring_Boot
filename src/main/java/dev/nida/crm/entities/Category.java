@@ -9,13 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "cities")
-public class City extends BaseEntity {
+@Table(name = "categories")
+public class Category extends BaseEntity {
 
-    @Column(name = "country_id")
-    private long countryId;
-
-    @Column(name = "city_name")
+    @Column(name = "category_name")
     private String name;
-    private String surname;
 }

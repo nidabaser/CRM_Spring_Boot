@@ -10,11 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Table(name = "countries")
-public class Country {
-    @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
-    @Column(name = "Country_id")
-    private long id;
+public class Country extends BaseEntity {
+
     @Column(name = "Country_name")
     private String name;
 }
