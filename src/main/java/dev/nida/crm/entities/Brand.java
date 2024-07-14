@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "countries")
-public class Country extends BaseEntity {
+@Table(name = "Brands")
+public class Brand extends BaseEntity {
 
-    @Column(name = "Country_name")
+    @Column(name = "brand_name")
     private String name;
 }

@@ -12,45 +12,17 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Products {
+public class Products extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "Barcode", nullable = false)
-    private String barcode;
+    @JoinColumn(name = "category_id")
+    private String category;
 
-    @Column(name = "Product_Name", nullable = false)
-    private String productName;
+    @JoinColumn(name = "brand_id")
+    private String brand;
 
-    @Column(name = "VAT_Rate", nullable = false)
-    private int vatRate;
-
-    @Column(name = "Brand_ID", nullable = false)
-    private int brandId;
-
-    @Column(name = "Description")
-    private String description;
-
-    @Column(name = "Stock_Status", nullable = false)
-    private int stockStatus;
-
-    @Column(name = "Purchase_Price", nullable = false)
-    private BigDecimal purchasePrice;
-
-    @Column(name = "Sale_Price", nullable = false)
-    private BigDecimal salePrice;
-
-    @Column(name = "Unit", nullable = false)
-    private String unit;
-
-    @Column(name = "Status", nullable = false)
-    private Boolean status;
-
-    @Column(name = "Product_Type_ID", nullable = false)
-    private int productTypeId;
-
-    @Column(name = "Product_Photo")
-    private String productPhoto;
+    @Column(name = "price")
+    private double price;
 }
