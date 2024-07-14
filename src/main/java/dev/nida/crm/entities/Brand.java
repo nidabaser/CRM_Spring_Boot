@@ -1,17 +1,18 @@
 package dev.nida.crm.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-@Table(name = "Brands")
+@Getter
+@Setter
+@Table(name = "brands")
 public class Brand extends BaseEntity {
 
+    @NotBlank
     @Column(name = "brand_name")
     private String name;
 }

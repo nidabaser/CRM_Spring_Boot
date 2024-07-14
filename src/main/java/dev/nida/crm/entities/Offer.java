@@ -1,23 +1,22 @@
 package dev.nida.crm.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Table(name = "offers")
 public class Offer extends BaseEntity {
 
-    @Column(name = "company_id")
+    @Column(name = "company_id") // todo: ilişki eklenecek
     private long companyId;
 
-    @Column(name = "customer_id")
+    @Column(name = "customer_id") // todo: ilişki eklenecek
     private long customerId;
 
     @Column(name = "offer_details")
@@ -28,7 +27,7 @@ public class Offer extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "offer_status")
-    private OfferStatus offerStatus; // Bu satır değiştirilecek
+    private OfferStatus offerStatus;
 
     public enum OfferStatus {
         ACCEPTED,

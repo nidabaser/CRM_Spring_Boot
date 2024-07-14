@@ -1,19 +1,19 @@
 package dev.nida.crm.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Table(name = "districts")
 public class District extends BaseEntity {
 
-    @Column(name = "city_id")
-    private long cityId;
+    @ManyToOne
+    @JoinColumn(name = "city_id")
+    private City city;
 
     @Column(name = "district_name")
     private String name;

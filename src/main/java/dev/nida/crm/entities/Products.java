@@ -1,9 +1,7 @@
 package dev.nida.crm.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.repository.cdi.Eager;
 
 import java.math.BigDecimal;
@@ -11,10 +9,11 @@ import java.math.BigDecimal;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class Products extends BaseEntity{
 
-    @Column(name = "name")
+    @Column(name = "product_name")
     private String name;
 
     @JoinColumn(name = "category_id")
@@ -23,6 +22,6 @@ public class Products extends BaseEntity{
     @JoinColumn(name = "brand_id")
     private String brand;
 
-    @Column(name = "price")
+    @Column(name = "product_price")
     private double price;
 }

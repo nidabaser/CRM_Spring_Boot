@@ -1,17 +1,19 @@
 package dev.nida.crm.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Table(name = "categories")
 public class Category extends BaseEntity {
 
-    @Column(name = "category_name")
+    @NotBlank
+    @Column(name = "category_name", nullable = false)
     private String name;
 }
