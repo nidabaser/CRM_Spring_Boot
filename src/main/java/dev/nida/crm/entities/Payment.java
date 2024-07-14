@@ -46,7 +46,9 @@ public class Payment extends BaseEntity {
     public enum PaymentMethod {
         CREDIT_CARD,
         BANK_TRANSFER,
-        CASH
+        CASH,
+        PAYPAL,
+        ORDER
     }
 
     public enum PaymentStatus {
