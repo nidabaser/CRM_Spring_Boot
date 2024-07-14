@@ -17,5 +17,4 @@ public class City extends BaseEntity {
 
     @Column(name = "city_name")
     private String name;
-    private String surname;
 }
