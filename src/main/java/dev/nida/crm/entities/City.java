@@ -17,10 +17,12 @@ public class City extends BaseEntity {
     @Column(name = "city_name")
     private String name;
 
+
     @ManyToOne
     @JoinColumn(name = "country_id")
     private Country country;
 
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL)
     private List<District> districts;
+
 }
