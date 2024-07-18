@@ -10,6 +10,9 @@ This is an open source Customer Relationship Management (CRM) system. Project <b
 <code><img width="50" src="src/main/resources/images/maven.png" alt="Maven" title="Maven"/></code>
 <code><img width="50" src="src/main/resources/images/postgresql.png" alt="PostgreSQL" title="PostgreSQL"/></code>
 <code><img width="50" src="src/main/resources/images/rest.png" alt="REST" title="REST"/></code>
+<code><img width="50" src="src/main/resources/images/hibernate.png" alt="REST" title="REST"/></code>
+<code><img width="50" src="src/main/resources/images/mapstruct.png" alt="REST" title="REST"/></code>
+<code><img width="50" src="src/main/resources/images/jwt.png" alt="REST" title="REST"/></code>
 <code><img width="50" src="src/main/resources/images/swagger.png" alt="Swagger" title="Swagger"/></code>
 <code><img width="50" src="src/main/resources/images/intellij.png" alt="Intellij" title="Intellij"/></code>
 <code><img width="50" src="src/main/resources/images/git.png" alt="Git" title="Git"/></code>
