@@ -1,32 +1,53 @@
 package dev.nida.crm.entities;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ * @author Nida Başer
+ * @date July 2024
+ */
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "customers")
 public class Customer extends BaseEntity {
 
-    @Column(name = "customer_name")
-    private String name;
+    @Column(name = "first_name", nullable = false, length = 50)
+    private String firstName;
+
+    @Column(name = "last_name", nullable = false, length = 50)
+    private String lastName;
 
     @Email
-    @Column(name = "customer_email")
+    @Column(name = "email", unique = true, nullable = false, length = 100)
     private String email;
 
-    @Column(name = "customer_phone")
+    @Column(name = "phone", unique = true, length = 20)
     private String phone;
 
     @Column(name = "district_id")
-    private long districtId;
+    private Long districtId;
 
-    @Column(name = "customer_address")
+    @Column(name = "city_id")
+    private Long cityId;
+
+    @Column(name = "country_id")
+    private Long countryId;
+
+    @Column(name = "customer_address", length = 255)
     private String address;
 
-    // todo: şeihr ve ülke bilgisi gelecek
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
 }
