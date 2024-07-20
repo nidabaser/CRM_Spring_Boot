@@ -1,9 +1,9 @@
-# CRM with Spring Boot Project
+# CRM with Spring Boot
 
 *In progress*
 
 ### Overview
-This is an open-source Customer Relationship Management (CRM) system. The project is still under development. Contributions are welcome. If you want to contribute, you can open a [pull request](/README.md/#Contributing).
+This is an open-source Customer Relationship Management (CRM) system. The project is **still under development**. Contributions are welcome. If you want to contribute, you can open a [pull request](/README.md/#Contributing).
 
 ### Technologies
 
@@ -44,7 +44,7 @@ This is an open-source Customer Relationship Management (CRM) system. The projec
 
 1. Clone the repository:
    ```bash
-    git clone https://github.com/your-username/crm-spring-boot.git
+    git clone https://github.com/nidabaser/CRM_Spring_Boot.git
     ```
     ```bash
     cd crm-spring-boot
