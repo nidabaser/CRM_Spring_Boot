@@ -46,8 +46,10 @@ src
     │               │   ├── UserController.java     # REST API denetleyicileri
     │               │   └── OrderController.java    # Örnek denetleyiciler
     │               ├── dto
-    │               │   ├── UserDTO.java            # Veri transfer nesneleri (DTO)
-    │               │   └── OrderDTO.java           # Örnek DTO
+    │               │   ├── request
+    │               │   │   └── CustomerRequest.java # Müşteri oluşturma/güncelleme isteği
+    │               │   └── response
+    │               │       └── CustomerResponse.java # Müşteri yanıt verisi
     │               ├── entity
     │               │   ├── User.java               # JPA entity sınıfları
     │               │   └── Order.java              # Örnek entity sınıfları
@@ -73,6 +75,7 @@ src
         ├── application.properties                  # Uygulama konfigürasyon dosyası
         ├── static
         └── templates
+
 ```
 
 ### Entity Diagram Sample
