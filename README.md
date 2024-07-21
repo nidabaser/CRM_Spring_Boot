@@ -30,7 +30,52 @@ This is an open-source Customer Relationship Management (CRM) system. The projec
 - Email and phone-based customer search
 - Full CRUD operations for customers
 
-### Entity Diagram
+### Directory Schema Sample
+```
+src
+└── main
+    ├── java
+    │   └── dev
+    │       └── nida
+    │           └── crm
+    │               ├── Application.java
+    │               ├── config
+    │               │   ├── WebConfig.java          # Web ve API konfigürasyonları
+    │               │   └── SecurityConfig.java     # Güvenlik konfigürasyonları
+    │               ├── controller
+    │               │   ├── UserController.java     # REST API denetleyicileri
+    │               │   └── OrderController.java    # Örnek denetleyiciler
+    │               ├── dto
+    │               │   ├── UserDTO.java            # Veri transfer nesneleri (DTO)
+    │               │   └── OrderDTO.java           # Örnek DTO
+    │               ├── entity
+    │               │   ├── User.java               # JPA entity sınıfları
+    │               │   └── Order.java              # Örnek entity sınıfları
+    │               ├── exception
+    │               │   ├── ResourceNotFoundException.java   # Özel istisna sınıfları
+    │               │   └── GlobalExceptionHandler.java      # Global istisna işleyici
+    │               ├── mapper
+    │               │   ├── UserMapper.java         # MapStruct mapper arayüzleri
+    │               │   └── OrderMapper.java        # Örnek mapper arayüzü
+    │               ├── repository
+    │               │   ├── UserRepository.java      # JPA repository sınıfları
+    │               │   └── OrderRepository.java     # Örnek repository
+    │               ├── service
+    │               │   ├── UserService.java         # Servis arayüzleri
+    │               │   └── OrderService.java        # Örnek servis arayüzü
+    │               │   └── impl
+    │               │       ├── UserServiceImpl.java # Servis implementasyonları
+    │               │       └── OrderServiceImpl.java# Örnek servis implementasyonu
+    │               └── util
+    │                   ├── DateUtils.java           # Örnek yardımcı sınıf
+    │                   └── SomeOtherUtils.java      # Diğer yardımcı sınıflar
+    └── resources
+        ├── application.properties                  # Uygulama konfigürasyon dosyası
+        ├── static
+        └── templates
+```
+
+### Entity Diagram Sample
 
 ![CRM_Entity_Diagram.png](src/main/resources/images/CRM_Entity_Diagram.png)
 
