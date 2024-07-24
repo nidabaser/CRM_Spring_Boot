@@ -1,4 +1,4 @@
-package dev.nida.crm.service.Impl;
+package dev.nida.crm.service.impl;
 
 import dev.nida.crm.entities.Customer;
 import dev.nida.crm.repository.CustomerRepository;

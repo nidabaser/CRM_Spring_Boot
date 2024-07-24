@@ -30,55 +30,76 @@ This is an open-source Customer Relationship Management (CRM) system. The projec
 - Email and phone-based customer search
 - Full CRUD operations for customers
 
-### Directory Schema Sample
-```
-src
-└── main
-    ├── java
-    │   └── dev
-    │       └── nida
-    │           └── crm
-    │               ├── Application.java
-    │               ├── config
-    │               │   ├── WebConfig.java          # Web ve API konfigürasyonları
-    │               │   └── SecurityConfig.java     # Güvenlik konfigürasyonları
-    │               ├── controller
-    │               │   ├── UserController.java     # REST API denetleyicileri
-    │               │   └── OrderController.java    # Örnek denetleyiciler
-    │               ├── dto
-    │               │   ├── request
-    │               │   │   └── CustomerRequest.java # Müşteri oluşturma/güncelleme isteği
-    │               │   └── response
-    │               │       └── CustomerResponse.java # Müşteri yanıt verisi
-    │               ├── entity
-    │               │   ├── User.java               # JPA entity sınıfları
-    │               │   └── Order.java              # Örnek entity sınıfları
-    │               ├── exception
-    │               │   ├── ResourceNotFoundException.java   # Özel istisna sınıfları
-    │               │   └── GlobalExceptionHandler.java      # Global istisna işleyici
-    │               ├── mapper
-    │               │   ├── UserMapper.java         # MapStruct mapper arayüzleri
-    │               │   └── OrderMapper.java        # Örnek mapper arayüzü
-    │               ├── repository
-    │               │   ├── UserRepository.java      # JPA repository sınıfları
-    │               │   └── OrderRepository.java     # Örnek repository
-    │               ├── service
-    │               │   ├── UserService.java         # Servis arayüzleri
-    │               │   └── OrderService.java        # Örnek servis arayüzü
-    │               │   └── impl
-    │               │       ├── UserServiceImpl.java # Servis implementasyonları
-    │               │       └── OrderServiceImpl.java# Örnek servis implementasyonu
-    │               └── util
-    │                   ├── DateUtils.java           # Örnek yardımcı sınıf
-    │                   └── SomeOtherUtils.java      # Diğer yardımcı sınıflar
-    └── resources
-        ├── application.properties                  # Uygulama konfigürasyon dosyası
-        ├── static
-        └── templates
+### Directory Schema for Best Practices
 
-```
+````
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── example/
+│   │           └── yourapp/
+│   │               ├── config/              # Konfigürasyon dosyaları
+│   │               │   ├── SwaggerConfig.java
+│   │               │   ├── SecurityConfig.java
+│   │               │   └── AppConfig.java
+│   │               ├── controller/          # REST API denetleyicileri
+│   │               │   ├── UserController.java
+│   │               │   └── ListingController.java
+│   │               ├── dto/                 # Veri transfer objeleri
+│   │               │   ├── request/
+│   │               │   │   ├── UserRequest.java
+│   │               │   │   └── ListingRequest.java
+│   │               │   ├── response/
+│   │               │   │   ├── UserResponse.java
+│   │               │   │   └── ListingResponse.java
+│   │               │   └── Result.java
+│   │               ├── entity/              # JPA entity sınıfları
+│   │               │   ├── BaseEntity.java
+│   │               │   ├── User.java
+│   │               │   └── Listing.java
+│   │               ├── exception/           # Hata işleme
+│   │               │   ├── GlobalExceptionHandler.java
+│   │               │   ├── CustomException.java
+│   │               │   └── NotFoundException.java
+│   │               ├── mapper/              # MapStruct Mapper sınıfları
+│   │               │   ├── UserMapper.java
+│   │               │   └── ListingMapper.java
+│   │               ├── repository/          # JPA repository sınıfları
+│   │               │   ├── UserRepository.java
+│   │               │   └── ListingRepository.java
+│   │               ├── service/             # Servis arayüzleri
+│   │               │   ├── UserService.java
+│   │               │   └── ListingService.java
+│   │               │   └── impl/            # Servis implementasyonları
+│   │               │       ├── UserServiceImpl.java
+│   │               │       └── ListingServiceImpl.java
+│   │               ├── util/                # Yardımcı sınıflar ve araçlar
+│   │               │   └── UtilityClass.java
+│   │               ├── security/            # Güvenlik yapılandırmaları
+│   │               │   ├── AuditConfiguration.java
+│   │               │   ├── AuditorAwareImpl.java
+│   │               │   ├── JwtAuthenticationFilter.java
+│   │               │   ├── JwtTokenProvider.java
+│   │               │   ├── CustomUserDetailsService.java
+│   │               │   └── SecurityConstants.java
+│   │               └── YourAppApplication.java # Spring Boot ana uygulama sınıfı
+│   └── resources/
+│       ├── application.properties           # Uygulama yapılandırma dosyası
+│       └── application.yml                  # YML yapılandırma dosyası (eğer kullanılıyorsa)
+└── test/
+├── java/
+│   └── com/
+│       └── example/
+│           └── yourapp/
+│               ├── controller/          # Test sınıfları (kontrollerler)
+│               ├── service/             # Test sınıfları (servisler)
+│               └── YourAppApplicationTests.java # Test ana sınıfı
+└── resources/
+└── application.properties           # Test yapılandırma dosyası
+````
 
-### Entity Diagram Sample
+### Entity Diagram Sample (not finished will be updated)
 
 ![CRM_Entity_Diagram.png](src/main/resources/images/CRM_Entity_Diagram.png)
 
@@ -97,14 +118,14 @@ src
     ```bash
     cd crm-spring-boot
     ```
-2. Configure the database:
-
-    Create a PostgreSQL database named `crm`. Update the `application.properties` file with your database username and password
-    ```
-    spring.datasource.url=jdbc:postgresql://localhost:5432/crm
-    spring.datasource.username=your_username
-    spring.datasource.password=your_password
-    ```
+2. Configure the database.
+   - Create a PostgreSQL database named `crm`. 
+   - Update the `environment variables`:
+   ```
+   spring.datasource.url=${YOUR_DB_URL}
+   spring.datasource.username=${YOUR_DB_USERNAME}
+   spring.datasource.password=${YOUR_DB_PASSWORD}
+   ```
 3. Build the project:
     ```bash
     mvn clean install
